@@ -12,6 +12,13 @@
 		EC5DA29329A558C200A095FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC5DA29229A558C200A095FF /* Assets.xcassets */; };
 		EC5DA29629A558C200A095FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC5DA29429A558C200A095FF /* LaunchScreen.storyboard */; };
 		EC5DA29F29A5643200A095FF /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5DA29E29A5643200A095FF /* MenuController.swift */; };
+		ECCA058A29A7F970006753D4 /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA058929A7F970006753D4 /* MenuItemCell.swift */; };
+		ECD1178B29A7464B00103576 /* BaseSlidingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD1178A29A7464B00103576 /* BaseSlidingController.swift */; };
+		ECD1178E29A7679B00103576 /* CustomMenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD1178D29A7679B00103576 /* CustomMenuHeaderView.swift */; };
+		ECD1179029A789EF00103576 /* SpacerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD1178F29A789EE00103576 /* SpacerView.swift */; };
+		ECD1179429A7AA9A00103576 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD1179329A7AA9A00103576 /* Model.swift */; };
+		ECD415B729A8BF190083FF7B /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD415B629A8BF190083FF7B /* ListController.swift */; };
+		ECD415B929A8D9850083FF7B /* BookmarksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD415B829A8D9850083FF7B /* BookmarksController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		EC5DA29529A558C200A095FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC5DA29729A558C200A095FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC5DA29E29A5643200A095FF /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		ECCA058929A7F970006753D4 /* MenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
+		ECD1178A29A7464B00103576 /* BaseSlidingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSlidingController.swift; sourceTree = "<group>"; };
+		ECD1178D29A7679B00103576 /* CustomMenuHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenuHeaderView.swift; sourceTree = "<group>"; };
+		ECD1178F29A789EE00103576 /* SpacerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacerView.swift; sourceTree = "<group>"; };
+		ECD1179329A7AA9A00103576 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		ECD415B629A8BF190083FF7B /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
+		ECD415B829A8D9850083FF7B /* BookmarksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +69,9 @@
 			isa = PBXGroup;
 			children = (
 				EC5DA2A029A564F900A095FF /* App */,
+				ECD1179529A7AC3400103576 /* Modle */,
+				ECD1178C29A7677900103576 /* Views */,
 				EC5DA29D29A5642400A095FF /* Controllers */,
-				EC5DA28D29A558C000A095FF /* HomeController.swift */,
 				EC5DA2A129A5650200A095FF /* Resources */,
 			);
 			path = SlideOutMenu;
@@ -65,7 +80,11 @@
 		EC5DA29D29A5642400A095FF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				ECD1178929A7460000103576 /* Base */,
 				EC5DA29E29A5643200A095FF /* MenuController.swift */,
+				EC5DA28D29A558C000A095FF /* HomeController.swift */,
+				ECD415B629A8BF190083FF7B /* ListController.swift */,
+				ECD415B829A8D9850083FF7B /* BookmarksController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -86,6 +105,32 @@
 				EC5DA29429A558C200A095FF /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		ECD1178929A7460000103576 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				ECD1178A29A7464B00103576 /* BaseSlidingController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		ECD1178C29A7677900103576 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ECD1178D29A7679B00103576 /* CustomMenuHeaderView.swift */,
+				ECD1178F29A789EE00103576 /* SpacerView.swift */,
+				ECCA058929A7F970006753D4 /* MenuItemCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ECD1179529A7AC3400103576 /* Modle */ = {
+			isa = PBXGroup;
+			children = (
+				ECD1179329A7AA9A00103576 /* Model.swift */,
+			);
+			path = Modle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,7 +205,14 @@
 			files = (
 				EC5DA28E29A558C000A095FF /* HomeController.swift in Sources */,
 				EC5DA29F29A5643200A095FF /* MenuController.swift in Sources */,
+				ECD1179029A789EF00103576 /* SpacerView.swift in Sources */,
+				ECD415B729A8BF190083FF7B /* ListController.swift in Sources */,
 				EC5DA28A29A558C000A095FF /* AppDelegate.swift in Sources */,
+				ECD1178E29A7679B00103576 /* CustomMenuHeaderView.swift in Sources */,
+				ECCA058A29A7F970006753D4 /* MenuItemCell.swift in Sources */,
+				ECD1178B29A7464B00103576 /* BaseSlidingController.swift in Sources */,
+				ECD1179429A7AA9A00103576 /* Model.swift in Sources */,
+				ECD415B929A8D9850083FF7B /* BookmarksController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
