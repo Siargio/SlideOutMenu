@@ -19,6 +19,11 @@
 		ECD1179429A7AA9A00103576 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD1179329A7AA9A00103576 /* Model.swift */; };
 		ECD415B729A8BF190083FF7B /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD415B629A8BF190083FF7B /* ListController.swift */; };
 		ECD415B929A8D9850083FF7B /* BookmarksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD415B829A8D9850083FF7B /* BookmarksController.swift */; };
+		ECD415BD29A90E2B0083FF7B /* ChatroomMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD415BC29A90E2B0083FF7B /* ChatroomMenuCell.swift */; };
+		ECD415BF29A917970083FF7B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD415BE29A917970083FF7B /* Extensions.swift */; };
+		ECD415C129A924350083FF7B /* MyCustomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD415C029A924350083FF7B /* MyCustomHeader.swift */; };
+		ECD415C429A94C1B0083FF7B /* ChatroomMenuContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD415C329A94C1B0083FF7B /* ChatroomMenuContainerController.swift */; };
+		ECD415C629A960E10083FF7B /* ModelChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD415C529A960E10083FF7B /* ModelChat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +41,11 @@
 		ECD1179329A7AA9A00103576 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		ECD415B629A8BF190083FF7B /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
 		ECD415B829A8D9850083FF7B /* BookmarksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksController.swift; sourceTree = "<group>"; };
+		ECD415BC29A90E2B0083FF7B /* ChatroomMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomMenuCell.swift; sourceTree = "<group>"; };
+		ECD415BE29A917970083FF7B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		ECD415C029A924350083FF7B /* MyCustomHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomHeader.swift; sourceTree = "<group>"; };
+		ECD415C329A94C1B0083FF7B /* ChatroomMenuContainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomMenuContainerController.swift; sourceTree = "<group>"; };
+		ECD415C529A960E10083FF7B /* ModelChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelChat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				EC5DA2A029A564F900A095FF /* App */,
+				ECD415C229A926D70083FF7B /* Extension */,
 				ECD1179529A7AC3400103576 /* Modle */,
 				ECD1178C29A7677900103576 /* Views */,
 				EC5DA29D29A5642400A095FF /* Controllers */,
@@ -85,6 +96,7 @@
 				EC5DA28D29A558C000A095FF /* HomeController.swift */,
 				ECD415B629A8BF190083FF7B /* ListController.swift */,
 				ECD415B829A8D9850083FF7B /* BookmarksController.swift */,
+				ECD415C329A94C1B0083FF7B /* ChatroomMenuContainerController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -121,6 +133,8 @@
 				ECD1178D29A7679B00103576 /* CustomMenuHeaderView.swift */,
 				ECD1178F29A789EE00103576 /* SpacerView.swift */,
 				ECCA058929A7F970006753D4 /* MenuItemCell.swift */,
+				ECD415BC29A90E2B0083FF7B /* ChatroomMenuCell.swift */,
+				ECD415C029A924350083FF7B /* MyCustomHeader.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -129,8 +143,17 @@
 			isa = PBXGroup;
 			children = (
 				ECD1179329A7AA9A00103576 /* Model.swift */,
+				ECD415C529A960E10083FF7B /* ModelChat.swift */,
 			);
 			path = Modle;
+			sourceTree = "<group>";
+		};
+		ECD415C229A926D70083FF7B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				ECD415BE29A917970083FF7B /* Extensions.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,12 +226,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECD415BF29A917970083FF7B /* Extensions.swift in Sources */,
 				EC5DA28E29A558C000A095FF /* HomeController.swift in Sources */,
+				ECD415C429A94C1B0083FF7B /* ChatroomMenuContainerController.swift in Sources */,
 				EC5DA29F29A5643200A095FF /* MenuController.swift in Sources */,
 				ECD1179029A789EF00103576 /* SpacerView.swift in Sources */,
+				ECD415BD29A90E2B0083FF7B /* ChatroomMenuCell.swift in Sources */,
 				ECD415B729A8BF190083FF7B /* ListController.swift in Sources */,
 				EC5DA28A29A558C000A095FF /* AppDelegate.swift in Sources */,
 				ECD1178E29A7679B00103576 /* CustomMenuHeaderView.swift in Sources */,
+				ECD415C129A924350083FF7B /* MyCustomHeader.swift in Sources */,
+				ECD415C629A960E10083FF7B /* ModelChat.swift in Sources */,
 				ECCA058A29A7F970006753D4 /* MenuItemCell.swift in Sources */,
 				ECD1178B29A7464B00103576 /* BaseSlidingController.swift in Sources */,
 				ECD1179429A7AA9A00103576 /* Model.swift in Sources */,
