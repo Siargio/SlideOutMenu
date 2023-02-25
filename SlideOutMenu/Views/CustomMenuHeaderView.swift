@@ -23,7 +23,7 @@ class CustomMenuHeaderView: UIView {
     let nameLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
-        label.text = "Siarhei Masiuk"
+        label.text = "Anastasia Horop"
         label.font = UIFont.systemFont(ofSize: 20, weight: .heavy)
         return label
     }()
@@ -31,7 +31,7 @@ class CustomMenuHeaderView: UIView {
     let userNameLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
-        label.text = "@dadadadad"
+        label.text = "@Anastasia"
         return label
     }()
 

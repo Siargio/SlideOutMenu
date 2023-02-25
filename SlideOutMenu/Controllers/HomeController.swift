@@ -11,15 +11,14 @@ final class HomeController: UITableViewController {
 
     //MARK: - Property
 
-    let menuController = MenuController()
+   // let menuController = MenuController()
 
     //MARK: - LifeCycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.backgroundColor = .red
+        tableView.backgroundColor = .white
         setupNavigationItems()
-
     }
 
     //MARK: - Setups
@@ -35,8 +34,29 @@ final class HomeController: UITableViewController {
     fileprivate func setupNavigationItems() {
         navigationItem.title = "Home"
         navigationItem.titleView?.backgroundColor = .black
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Open", style: .plain, target: self, action: #selector(handleOpen))
+
+        setupCircularNavigationButton()
+
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Hide", style: .plain, target: self, action: #selector(handleHide))
+    }
+
+    private func setupCircularNavigationButton() {
+        let image = UIImage(named: "girlProfile")?.withRenderingMode(.alwaysOriginal)
+
+        let customView = UIButton(type: .system)
+        customView.addTarget(self, action: #selector(handleOpen), for: .touchUpInside)
+        customView.setImage(image, for: .normal)
+        customView.imageView?.contentMode = .scaleAspectFit
+
+        customView.layer.cornerRadius = 20
+        customView.clipsToBounds = true
+
+        customView.widthAnchor.constraint(equalToConstant: 40).isActive = true
+        customView.heightAnchor.constraint(equalToConstant: 40).isActive = true
+
+        let barButtonItem = UIBarButtonItem(customView: customView)
+
+        navigationItem.leftBarButtonItem = barButtonItem
     }
 }
 

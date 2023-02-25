@@ -13,20 +13,17 @@ class BookmarksController: UITableViewController {
         super.viewDidLoad()
         tableView.backgroundColor = .blue
 
-
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        15
+        return 7
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-     //  tableView.dequeueReusableCell(withIdentifier: <#T##String#>, for: <#T##IndexPath#>)
+
         cell.textLabel?.text = "adfadafaf \(indexPath.row)"
         return cell
     }
-
-
 }

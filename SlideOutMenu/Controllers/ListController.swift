@@ -16,10 +16,6 @@ class ListController: UIViewController {
         navigationItem.title = "List"
         navigationController?.navigationBar.prefersLargeTitles = true
 
-
-
-
-
             let label = UILabel()
             label.text = "Label"
             label.font = .systemFont(ofSize: 50, weight: .medium)
@@ -29,13 +25,5 @@ class ListController: UIViewController {
             label.translatesAutoresizingMaskIntoConstraints = false
 
         view.addSubview(label)
-
-//        NSLayoutConstraint.activate([
-////            label.widthAnchor.constraint(equalToConstant: 250),
-////            label.heightAnchor.constraint(equalToConstant: 150),
-//            label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-//            label.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-//        ])
     }
-
 }

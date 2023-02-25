@@ -16,7 +16,7 @@ class BaseSlidingController: UIViewController {
     //MARK: - Property
 
     var rightViewController: UIViewController = UINavigationController(rootViewController: HomeController())
-
+    let menuController = ChatroomMenuContainerController()
     var redViewLeadingConstraint: NSLayoutConstraint!
     var redViewTrailingConstraint: NSLayoutConstraint!
     fileprivate let menuWidth: CGFloat = 300
@@ -121,6 +121,7 @@ class BaseSlidingController: UIViewController {
         redViewLeadingConstraint.constant = menuWidth
         redViewTrailingConstraint.constant = menuWidth
         performAnimations()
+        setNeedsStatusBarAppearanceUpdate()
     }
 
     func closeMenu() {
@@ -128,6 +129,11 @@ class BaseSlidingController: UIViewController {
         redViewTrailingConstraint.constant = 0
         isMenuOpened = false
         performAnimations()
+        setNeedsStatusBarAppearanceUpdate()
+    }
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return isMenuOpened ? .lightContent : .default
     }
 
     func didSelectMenuItem(indexPath: IndexPath) {
@@ -142,8 +148,7 @@ class BaseSlidingController: UIViewController {
         case 2:
             rightViewController = BookmarksController()
         default:
-            let tabbarController = UITableViewController()
-
+            print("fafaf")
         }
 
         redView.addSubview(rightViewController.view)
@@ -153,12 +158,10 @@ class BaseSlidingController: UIViewController {
         redView.bringSubviewToFront(darkCoverView)
     }
 
-
     fileprivate func   preformRightViewCleanUp() {
         rightViewController.view.removeFromSuperview()
         rightViewController.removeFromParent()
     }
-
 
     fileprivate func performAnimations() {
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut) {
@@ -189,10 +192,6 @@ class BaseSlidingController: UIViewController {
     }
 
     private func setupViewControllers() {
-        // let homeController = HomeController()
-
-        let menuController = MenuController()
-
         let homeView = rightViewController.view!
         let menuView = menuController.view!
 
